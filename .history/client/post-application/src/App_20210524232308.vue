@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <Header/>
-    <router-view/>
+    <h3>hello this is fullstacks app</h3>
   </div>
 </template>
 
 <script>
-import Header from './core/Header'
+
 export default {
   name: 'App',
-  components:{
-    Header
-  }
 }
 </script>
 

@@ -39,8 +39,8 @@ export const createPost = async (req,res) => {
 export const updatePost = async (req,res) => {
     try {
         const updatePost = req.body
-        const post = await PostModel.findByIdAndUpdate(req.params.id, updatePost, {new:true})
-        console.log('post',post)
+        const posts = await PostModel.findByIdAndUpdate(req.params.id, updatePost, {new:true})
+        console.log('post',posts)
         res.status(200).json({msg:'updated successfully'})
     } catch (error) {
         res.status(400).json({msg:'Server Error'})
