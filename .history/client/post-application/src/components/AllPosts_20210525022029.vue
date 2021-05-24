@@ -16,7 +16,6 @@
 
 <script>
 import {mapActions, mapGetters} from 'vuex'
-const key = 'updatable';
 export default {
     name:'AllPosts',
     computed: mapGetters(["allPosts"]),
@@ -28,10 +27,8 @@ export default {
         deletePOST(id){
             if(id){
                 this.deletePost(id)
-                this.$message.loading({ content: 'Deleting...', key });
-                setTimeout(() => {
-                    this.$message.success({ content: 'Deleted!', key, duration: 2 });
-                }, 1000);
+                alert('delete successfully')
+                console.log('delete successfully')
             }else{
                 alert('delete failed')
             }

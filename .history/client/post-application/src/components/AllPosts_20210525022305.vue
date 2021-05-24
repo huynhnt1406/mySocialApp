@@ -16,7 +16,6 @@
 
 <script>
 import {mapActions, mapGetters} from 'vuex'
-const key = 'updatable';
 export default {
     name:'AllPosts',
     computed: mapGetters(["allPosts"]),
