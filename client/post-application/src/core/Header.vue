@@ -1,6 +1,6 @@
 <template>
   <b-navbar class="p-2" toggleable type="dark" variant="dark">
-    <b-navbar-brand href="#">Post Management</b-navbar-brand>
+    <b-navbar-brand href="#">mySocial <a-icon type="smile" /></b-navbar-brand>
 
     <b-navbar-toggle target="navbar-toggle-collapse">
       <template #default="{ expanded }">
@@ -11,9 +11,9 @@
 
     <b-collapse id="navbar-toggle-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <router-link to="/">All Posts</router-link>
-        <router-link to="/create">Create a Post</router-link> 
-      </b-navbar-nav>
+        <router-link class="links" to="/">All Posts</router-link>
+        <router-link class="links" to="/create">Create a Post</router-link> 
+      </b-navbar-nav>s
     </b-collapse>
   </b-navbar>
 </template>
@@ -25,5 +25,11 @@ export default {
 </script>
 
 <style>
-
+.links{
+  color:white;
+  margin:5px;
+  padding:5px;
+  border:1px solid white;
+  width: 100px;
+}
 </style>

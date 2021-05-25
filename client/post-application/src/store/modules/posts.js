@@ -31,7 +31,7 @@ const mutations = {
         if(index != -1){
             state.posts.splice(index, 1, data)
         }
-    }
+    },
 }
 
 export default {
