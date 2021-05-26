@@ -16,8 +16,7 @@ const schema = new mongoose.Schema({
     },
     authorImg:{
         type:String,
-        default:"null",
-        require:true
+        default:'null'
     },
     imgPost:{
         type:String,

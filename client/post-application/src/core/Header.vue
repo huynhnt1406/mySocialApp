@@ -11,9 +11,10 @@
 
     <b-collapse id="navbar-toggle-collapse" is-nav>
       <b-navbar-nav class="ml-auto">
-        <router-link class="links" to="/">All Posts</router-link>
+        <router-link class="links" to="/homepage">All Posts</router-link>
         <router-link class="links" to="/create">Create a Post</router-link> 
-      </b-navbar-nav>s
+        <router-link class="links" to="/signin">Sign In</router-link> 
+      </b-navbar-nav>
     </b-collapse>
   </b-navbar>
 </template>

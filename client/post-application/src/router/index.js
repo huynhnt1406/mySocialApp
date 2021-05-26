@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import AllPosts from '../components/AllPosts'
 import CreatePost from '../components/CreatePost'
 import DetailPost from '../components/DetailPost'
+import CreateUser from '../components/CreateUser'
+import SignUp from '../components/SignUp'
 const routes = [
     {
         path:'/',
@@ -13,6 +15,16 @@ const routes = [
         path:'/create',
         name:'CreatePost',
         component:CreatePost
+    },
+    {
+        path:'/signin',
+        name:'CreateUser',
+        component:CreateUser
+    },
+    {
+        path:'/signup',
+        name:'SignUp',
+        component:SignUp
     },
     {
         path:'/posts/:id',

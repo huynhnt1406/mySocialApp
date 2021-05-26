@@ -14,7 +14,7 @@
                             </div>
                         </div>
                         <div class="post-detail">
-                            <b-jumbotron :header="post.title" >
+                            <b-jumbotron :header="post.title" class="img-container" >
                                 <img :src="post.imgPost" alt="">
                                 <p>{{post.content}}</p>
                             </b-jumbotron>
@@ -117,5 +117,14 @@ export default {
 }
 .btn-action{
     display: flex;
+}
+.img-container img{
+    width: 60%;
+}
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 </style>
