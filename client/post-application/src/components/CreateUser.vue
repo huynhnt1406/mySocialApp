@@ -46,7 +46,7 @@
               required
             ></b-form-input>  
              <label for="author">Address</label> 
-            <b-button @click="signIn"  variant="success">Create</b-button> <h3> Have account yet? <router-link to="/signup">Sign Up</router-link></h3>
+            <b-button @click="signIn"  variant="success">Create</b-button> <h3> Have account yet? <router-link to="/login">Log In</router-link></h3>
          </b-jumbotron>
     </b-form>
 </template>

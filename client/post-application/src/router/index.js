@@ -5,11 +5,18 @@ import CreatePost from '../components/CreatePost'
 import DetailPost from '../components/DetailPost'
 import CreateUser from '../components/CreateUser'
 import SignUp from '../components/SignUp'
+import UploadVideo from '../components/UploadVideo'
+import AllVideos from '../components/AllVideos'
 const routes = [
     {
         path:'/',
         name:'AllPosts',
         component:AllPosts
+    },
+    {
+        path:'/videos',
+        name:'AllVideos',
+        component:AllVideos
     },
     {
         path:'/create',
@@ -22,7 +29,7 @@ const routes = [
         component:CreateUser
     },
     {
-        path:'/signup',
+        path:'/login',
         name:'SignUp',
         component:SignUp
     },
@@ -31,6 +38,11 @@ const routes = [
         name:'DetailPost',
         component:DetailPost,
         props:true
+    },
+    {
+        path:'/upload',
+        name:'UploadVideo',
+        component:UploadVideo,
     }
 ]
 Vue.use(VueRouter)

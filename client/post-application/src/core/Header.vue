@@ -1,21 +1,8 @@
 <template>
   <b-navbar class="p-2" toggleable type="dark" variant="dark">
-    <b-navbar-brand href="#">mySocial <a-icon type="smile" /></b-navbar-brand>
-
-    <b-navbar-toggle target="navbar-toggle-collapse">
-      <template #default="{ expanded }">
-        <b-icon v-if="expanded" icon="chevron-bar-up"></b-icon>
-        <b-icon v-else icon="chevron-bar-down"></b-icon>
-      </template>
-    </b-navbar-toggle>
-
-    <b-collapse id="navbar-toggle-collapse" is-nav>
-      <b-navbar-nav class="ml-auto">
-        <router-link class="links" to="/homepage">All Posts</router-link>
-        <router-link class="links" to="/create">Create a Post</router-link> 
+    <div class="signup">
         <router-link class="links" to="/signin">Sign In</router-link> 
-      </b-navbar-nav>
-    </b-collapse>
+    </div>
   </b-navbar>
 </template>
 
@@ -30,7 +17,6 @@ export default {
   color:white;
   margin:5px;
   padding:5px;
-  border:1px solid white;
   width: 100px;
 }
 </style>

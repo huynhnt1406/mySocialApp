@@ -28,8 +28,9 @@ const mutations = {
     removePost : (state,_id) => state.posts = state.posts.filter(post => post._id !== _id),
     updatePost: (state,data) => {
         const index = state.posts.findIndex(post => data._id === post._id)
+        console.log(index)
         if(index != -1){
-            state.posts.splice(index, 1, data)
+            state.posts.splice(index,1,data)
         }
     },
 }

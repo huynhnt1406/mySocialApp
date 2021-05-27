@@ -20,7 +20,13 @@
                   v-model="data.content"
                   required
                 ></b-form-input>
-                <label for="author">Created At:</label>
+                <label for="author">Picture's url:</label>
+                <b-form-input class="mb-2 mt-2"
+                  id="input-2"
+                  v-model="data.imgPost"
+                  required
+                ></b-form-input>
+                 <label for="author">Created At:</label>
                 <b-form-input class="mb-2 mt-2"
                   id="input-2"
                   v-model="data.createdAt"
@@ -87,7 +93,7 @@ export default {
                 alert('updated successfully')
                 this.updatePost(data)
                 this.$router.push({name:'AllPosts'})
-                console.log('updated successfully')
+                console.log(data)
             }else{
                 alert('update failed')
             }

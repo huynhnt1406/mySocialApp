@@ -4,6 +4,7 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import post from './router/post.js'
 import users from './router/users.js'
+import video from './router/video.js'
 const app = express()
 const PORT = process.env.PORT || 3333
 const MONGO_URI = 'mongodb+srv://admin:huynhnguyenbkak63@cluster0.mf7fr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority' 
@@ -22,4 +23,5 @@ mongoose.connect(MONGO_URI , {useUnifiedTopology:true, useNewUrlParser:true})
     })
 app.use('/posts', post)
 app.use('/users', users)
+app.use('/videos', video )
 

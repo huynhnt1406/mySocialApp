@@ -1,6 +1,7 @@
 <template>
   <div class="posts-container">
       <div class="posts">
+            <b-jumbotron  header="New Feeds" >
             <b-list-group  class="each-posts m-5" v-for="post in allPosts" :key="post._id">
                 <b-list-group-item>
                         <div class="user-info">
@@ -35,6 +36,7 @@
                         </div>
                 </b-list-group-item>
             </b-list-group>
+            </b-jumbotron>
       </div>
   </div>
 </template>
