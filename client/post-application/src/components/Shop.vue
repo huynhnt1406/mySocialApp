@@ -33,8 +33,18 @@
         </div>
     </div>
      <div class="show-videos">
-        <div v-for="video in videos" :key=video.id class="product">
-            <h3>{{video.title}}</h3>
+        <div class="products">
+          <div v-for="tool in household" :key=tool._id class="product">
+                <small>{{tool.title}}</small>
+                <p>{{tool.price}} đ</p>
+                <div class="img-product">
+                    <img :src="tool.productImgChild[0]" :alt="tool._id"/>
+                </div>
+                <div class="actUser">
+                    <b-button  variant="success">Detail</b-button>
+                    <b-button variant="outline-primary">Add To Cart</b-button>
+                </div>
+            </div>
         </div>
     </div>
   </div>
@@ -47,7 +57,7 @@ export default {
     return {
       collapsed: false,
       products:[],
-      videos:[]
+      household:[]
     };
   },
   computed: mapGetters(["allProducts"]),
@@ -64,13 +74,13 @@ export default {
                 console.log(err)
             })
             setTimeout(() => {
-                this.videos = null
+                this.household = null
             }, 1000);
       },
       async getHousetools(){
-           await axios.get('http://localhost:3333/videos')
-            .then(res => this.videos = res.data)
-            .then(console.log(this.videos))
+           await axios.get('http://localhost:3333/household')
+            .then(res => this.household = res.data)
+            .then(console.log(this.household))
             .catch(err => {
                 console.log(err)
             })
@@ -106,16 +116,16 @@ export default {
     height: 40px;
 }
 .product img{
-    height: 220px;
-    width:180px;
-    padding:30px;
+    height: 250px;
+    width:250px;
 }
 .product{
-    padding:20px;
     flex:1;
     margin:10px;
     box-shadow: 0 1px 1px rgba(0,0,0,0.5);
     position: relative;
+    height: 400px;
+    padding:10px;
 }
 .products{
     display: flex;
