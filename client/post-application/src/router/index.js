@@ -7,6 +7,7 @@ import CreateUser from '../components/CreateUser'
 import SignUp from '../components/SignUp'
 import UploadVideo from '../components/UploadVideo'
 import AllVideos from '../components/AllVideos'
+import Shop from '../components/Shop'
 const routes = [
     {
         path:'/',
@@ -43,6 +44,11 @@ const routes = [
         path:'/upload',
         name:'UploadVideo',
         component:UploadVideo,
+    },
+    {
+        path:'/shop',
+        name:'Shop',
+        component:Shop,
     }
 ]
 Vue.use(VueRouter)

@@ -29,6 +29,7 @@ const mutations = {
     updatePost: (state,data) => {
         const index = state.posts.findIndex(post => data._id === post._id)
         console.log(index)
+        console.log(data)
         if(index != -1){
             state.posts.splice(index,1,data)
         }

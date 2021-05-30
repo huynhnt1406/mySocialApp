@@ -90,18 +90,23 @@ export default {
         },
         updatePOST(data){
             if(data){
-                alert('updated successfully')
                 this.updatePost(data)
+                console.log(this.updatePost)
                 this.$router.push({name:'AllPosts'})
                 console.log(data)
+                this.$notification.open({
+                  message: 'Notification',
+                  description:
+                    'You updated this post successfully',
+                  onClick: () => {
+                    console.log('Notification Clicked!');
+                  },
+                })       
             }else{
                 alert('update failed')
             }
         }
     },
-    mounted(){
-      this.changeTime()
-    }
 }
 </script>
 

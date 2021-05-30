@@ -12,6 +12,10 @@
           <span><router-link class="link" to="/videos">Watch</router-link></span>
         </a-menu-item>
         <a-menu-item key="3">
+          <a-icon type="video-camera" />
+          <span><router-link class="link" to="/shop">Shopping</router-link></span>
+        </a-menu-item>
+        <a-menu-item key="4">
           <a-icon type="user" />
           <span><router-link class="link" to="/myaccount">My account</router-link></span>
         </a-menu-item>
@@ -21,7 +25,7 @@
             <span><router-link class="link" to="/create">Create Post</router-link></span>
           </a-menu-item>
           <a-menu-item key="5">
-            <span><router-link class="link" to="/upload">Upload video</router-link></span>
+            <span><router-link class="link" to="/upload">Upload Video</router-link></span>
           </a-menu-item>
         </a-sub-menu>
       </a-menu>
