@@ -26,7 +26,7 @@
                     <img :src="product.productImgChild[0]" :alt="product._id"/>
                 </div>
                 <div class="actUser">
-                    <b-button  variant="success">Detail</b-button>
+                    <router-link class="link" :to="{name:'DetailProduct', params:{id:product._id}}"> <b-button variant="success">Detail</b-button> </router-link>
                     <b-button variant="outline-primary">Add To Cart</b-button>
                 </div>
             </div>
@@ -34,14 +34,14 @@
     </div>
      <div class="show-videos">
         <div class="products">
-          <div v-for="tool in household" :key=tool._id class="product">
+          <div v-for="tool in household" :key="tool._id" class="product">
                 <small>{{tool.title}}</small>
                 <p>{{tool.price}} đ</p>
                 <div class="img-product">
                     <img :src="tool.productImgChild[0]" :alt="tool._id"/>
                 </div>
                 <div class="actUser">
-                    <b-button  variant="success">Detail</b-button>
+                    <router-link class="link" :to="{name:'DetailProduct', params:{id:tool._id}}"> <b-button variant="success">Detail</b-button> </router-link>
                     <b-button variant="outline-primary">Add To Cart</b-button>
                 </div>
             </div>
@@ -75,7 +75,7 @@ export default {
             })
             setTimeout(() => {
                 this.household = null
-            }, 1000);
+            }, 500);
       },
       async getHousetools(){
            await axios.get('http://localhost:3333/household')
@@ -86,7 +86,7 @@ export default {
             })
             setTimeout(() => {
                 this.products = null
-            }, 1000);
+            }, 500);
       }
   }
 };
@@ -148,5 +148,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.link{
+    margin-left:5px;
 }
 </style>

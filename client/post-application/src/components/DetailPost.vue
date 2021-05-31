@@ -26,6 +26,12 @@
                   v-model="data.imgPost"
                   required
                 ></b-form-input>
+                <label for="author">Author's url:</label>
+                <b-form-input class="mb-2 mt-2"
+                  id="input-2"
+                  v-model="data.authorImg"
+                  required
+                ></b-form-input>
                  <label for="author">Created At:</label>
                 <b-form-input class="mb-2 mt-2"
                   id="input-2"
@@ -64,14 +70,9 @@ export default {
         const res =  await fetch(`http://localhost:3333/posts/${this.id}`)
         const respData = await res.json()
         this.data = respData
-        console.log(this.data)
     },
     methods:{
         ...mapActions(["deletePost","updatePost"]),
-        changeTime(){
-          this.createdTime = this.data.createdAt
-          console.log(this.createdTime)
-        },
         deletePOST(id){
             if(id){
                 this.deletePost(id)
@@ -91,9 +92,7 @@ export default {
         updatePOST(data){
             if(data){
                 this.updatePost(data)
-                console.log(this.updatePost)
                 this.$router.push({name:'AllPosts'})
-                console.log(data)
                 this.$notification.open({
                   message: 'Notification',
                   description:

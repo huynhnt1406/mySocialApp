@@ -21,10 +21,10 @@
         </a-menu-item>
         <a-sub-menu key="sub1">
           <span slot="title"><a-icon type="edit" /><span>My Activations</span></span>
-          <a-menu-item key="4">
+          <a-menu-item key="5">
             <span><router-link class="link" to="/create">Create Post</router-link></span>
           </a-menu-item>
-          <a-menu-item key="5">
+          <a-menu-item key="6">
             <span><router-link class="link" to="/upload">Upload Video</router-link></span>
           </a-menu-item>
         </a-sub-menu>

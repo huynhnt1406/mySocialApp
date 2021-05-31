@@ -3,7 +3,6 @@ import { PostModel } from "../model/PostModel.js"
 export const allPosts = async ( req ,res) => {
     try {
         const posts =  await PostModel.find()
-        console.log('posts', posts)
         res.status(200).json(posts)
     } catch (err) {
         res.status(400).json({msg:'Server Error'})
@@ -14,7 +13,6 @@ export const allPosts = async ( req ,res) => {
 export const getOnePost = async ( req ,res) => {
     try {
         const post = await PostModel.findById(req.params.id)
-        console.log('post',post)
         res.status(200).json(post)
         
     } catch (err) {
@@ -28,7 +26,6 @@ export const createPost = async (req,res) => {
         const newPost = req.body
         const post = new PostModel(newPost)
         await post.save()
-        console.log('post',post)
         res.status(200).json(post)
     } catch (error) {
         res.status(400).json({msg:'Server Error'})
@@ -39,7 +36,8 @@ export const createPost = async (req,res) => {
 export const updatePost = async (req,res) => {
     try {
         const updatePost = req.body
-        const post = await PostModel.findByIdAndUpdate(req.params.id, updatePost, {new:true})
+        const post = await PostModel.findOneAndUpdate({_id:req.params.id},updatePost,{new:true})
+        await post.save()
         console.log('post',post)
         res.status(200).json(post)
     } catch (error) {

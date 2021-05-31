@@ -8,6 +8,7 @@ import SignUp from '../components/SignUp'
 import UploadVideo from '../components/UploadVideo'
 import AllVideos from '../components/AllVideos'
 import Shop from '../components/Shop'
+import DetailProduct from '../components/DetailProduct'
 const routes = [
     {
         path:'/',
@@ -38,6 +39,12 @@ const routes = [
         path:'/posts/:id',
         name:'DetailPost',
         component:DetailPost,
+        props:true
+    },
+    {
+        path:'/products/:id',
+        name:'DetailProduct',
+        component:DetailProduct,
         props:true
     },
     {

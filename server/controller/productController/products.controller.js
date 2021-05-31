@@ -12,13 +12,12 @@ export const getAll = async (req, res) => {
     }
 }
 
-export const getOne = async (req,res) => {
+export const getOneItem = async (req,res ) => {
     try {
-        const product =  await ProductModel.findById(req.param.id)
-        console.log('this is one product', product)
+        const product = await ProductModel.findById(req.params.id)
         res.status(200).json(product)
     } catch (error) {
-        res.status(400).json({msg:"Bad request"})
+        res.status(400).json({msg:'Bad request'})
     }
 }
 
