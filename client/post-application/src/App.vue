@@ -19,13 +19,20 @@
           <a-icon type="user" />
           <span><router-link class="link" to="/myaccount">My account</router-link></span>
         </a-menu-item>
+         <a-menu-item key="5">
+          <a-icon type="user" />
+          <span><router-link class="link" to="/your-shopping-cart">Shopping Cart</router-link></span>
+        </a-menu-item>
         <a-sub-menu key="sub1">
-          <span slot="title"><a-icon type="edit" /><span>My Activations</span></span>
+          <span slot="title"><a-icon type="edit" /><span>My Logs</span></span>
           <a-menu-item key="5">
             <span><router-link class="link" to="/create">Create Post</router-link></span>
           </a-menu-item>
           <a-menu-item key="6">
             <span><router-link class="link" to="/upload">Upload Video</router-link></span>
+          </a-menu-item>
+           <a-menu-item key="7">
+            <span><router-link class="link" to="/saleproduct">Sale a product</router-link></span>
           </a-menu-item>
         </a-sub-menu>
       </a-menu>

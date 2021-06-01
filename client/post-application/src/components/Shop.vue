@@ -20,7 +20,7 @@
     <div class="show-products">
         <div class="products">
             <div v-for="product in products" :key=product._id class="product">
-                <small>{{product.title}}</small>
+                <strong><p>{{product.title}}</p></strong>
                 <p>{{product.price}} đ</p>
                 <div class="img-product">
                     <img :src="product.productImgChild[0]" :alt="product._id"/>
@@ -42,7 +42,7 @@
                 </div>
                 <div class="actUser">
                     <router-link class="link" :to="{name:'DetailProduct', params:{id:tool._id}}"> <b-button variant="success">Detail</b-button> </router-link>
-                    <b-button variant="outline-primary">Add To Cart</b-button>
+                    <b-button  variant="outline-primary">Add To Cart</b-button>
                 </div>
             </div>
         </div>
@@ -69,7 +69,6 @@ export default {
       async getProducts(){
           await axios.get('http://localhost:3333/products')
             .then(res => this.products = res.data)
-            .then(console.log(this.products))
             .catch(err => {
                 console.log(err)
             })

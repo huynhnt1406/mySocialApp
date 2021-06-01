@@ -9,6 +9,8 @@ import UploadVideo from '../components/UploadVideo'
 import AllVideos from '../components/AllVideos'
 import Shop from '../components/Shop'
 import DetailProduct from '../components/DetailProduct'
+import Sale from '../components/Sale'
+import YourPackage from '../components/YourPackage'
 const routes = [
     {
         path:'/',
@@ -18,7 +20,7 @@ const routes = [
     {
         path:'/videos',
         name:'AllVideos',
-        component:AllVideos
+        component:AllVideos,
     },
     {
         path:'/create',
@@ -29,6 +31,16 @@ const routes = [
         path:'/signin',
         name:'CreateUser',
         component:CreateUser
+    },
+    {
+        path:'/saleproduct',
+        name:'Sale',
+        component:Sale
+    },
+    {
+        path:'/your-shopping-cart',
+        name:'YourPackage',
+        component:YourPackage
     },
     {
         path:'/login',
